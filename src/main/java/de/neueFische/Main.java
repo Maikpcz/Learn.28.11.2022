@@ -2,14 +2,14 @@ package de.neueFische;
 
 public class Main {
     public static void main(String[] args) {
-        CAr bmw = new CAr();
+        CAr bmw = new CAr("BMW","Sedan","blau","3er");
         bmw.brand = "BMW";
         bmw.color = "Blau";
         bmw.model = "3er";
         bmw.type = "Sedan";
         bmw.year = 2015;
 
-        CAr audi= new CAr();
+        CAr audi= new CAr("auti","coupe","silver","a3");
         audi.brand = "Audi";
         audi.year = 2019;
         audi.type = "Coupe";
