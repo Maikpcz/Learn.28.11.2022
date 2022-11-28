@@ -1,5 +1,7 @@
 package de.neueFische.mode;
 
+import java.util.Objects;
+
 public class Student {
 
     private String name;
@@ -48,6 +50,16 @@ public class Student {
         this.fach = fach;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Student student = (Student) o;
+        return alter == student.alter && Objects.equals(name, student.name) && Objects.equals(fach, student.fach);
+    }
 
-
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, alter, fach);
+    }
 }
